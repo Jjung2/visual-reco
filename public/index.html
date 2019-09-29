@@ -33,67 +33,73 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/classifier.html">View Classifier</a>
-          </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Try it Yourself
-        </a>
-          
-          <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Classifier 1</a>
-            <a class="dropdown-item" href="#">Classifier 2</a>
-<!-- später für optische Feinheiten--><div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Classifier 3</a>
-            <a class="dropdown-item" href="#">Classifier 4</a>
-          </div>
-        </li>
+            <a class="nav-link" href="/classifier.html">Try it Yourself</a>
+		  </li>
       </ul>
     </div>
   </div>
 </nav>
-
+<!--body -->
 <div class="container text-center">
-  <h1 class="mt-5 text-white font-weight-light">Animated Bootstrap Navbar Dropdowns</h1>
-  
+  <h1 class="mt-5 text-capitalize"><strong>Avatards Atla Character Identifier</strong></h1>
 </div>
-   <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top shadow fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">AVATARD</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Auswertung</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Try it Yourself</a>
-          </li>
-         <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>-->
-
-  <!-- Page Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
-        <ul class="list-unstyled">
-          <li>Bootstrap 4.3.1</li>
-          <li>jQuery 3.4.1</li>
-        </ul>
+        <h3 class="mt-5">Um den Classifier selbst zu nutzen einfach oben im Menu "Try it yourself" auswählen, viel spaß! </h3>
+        <br>
+		<h3 class="mt-5"> Um mehr über das Projekt und unsere Auswertung zu erfahren, direkt hier weiterlesen</h3> 
+		  <br>
+		  <!--ja, ist hässlich aber BSI 1 ist auch echt lang her und die app und das hosting zum laufen zu bekommen hat sämtliche mentale Reserven verbraucht also ist das hier echt funktionalität über style -->
+        <p class="lead"><strong class="h2">Auswertung der Comicanalyse durch Watson: </strong></p>
+		  <br><!-- ich weiß, dass hier und folgend paragraphen und styling über css schöner wären aber das hier geht mit makros so schön schnell und ich hoffe einfach, dass darüber hinweg gesehen wird... -->
+		  <p class="text-left"><strong class="h2">Setup </strong></p>
+		  <p class="text-left"><strong> Folgende Classifier wurden zur Auswertung herangezogen: </strong></p>
+		  <br>
+	<p class="text-left"><strong>5 Character Identifier (Sokka, Zuko, Aang, Katara, Toph)
+<br>
+Flashback erkennung anhand der Farbgebung der Seite
+<br>
+Bending identifier (4 Elemente Wasser,Feuer, Erde, Luft)<br>
+Identifier für Kulturell relevante Kleidung bzw. Farb Korrelation zwischen Person und Kleidung
+<br>
+Analysiert wurden alle 3 Bände der Avatar the last airbender Comicreihe mit dem Titel “The Promise”
+<br><br>
+
+		Die gefundenen Ergebnisse wurden manuell ausgewertet und auf Signifikanz untersucht.
+</strong></p>
+<p class="text-left"><strong class="h2">Probleme bei der Auswertung </strong></p>
+<p class="text-left"><strong>		  
+Einige Szenen des 1. Comics sind Abgedunkelt, jedoch kein Flashback und das Farbspektrum bei Flashbacks ist nicht durchgehend konform, dadurch gab es besonders hier viele false positives, diese wurden im Nachgang manuell in der Auswertung angepasst.<br><br>
+
+Der Identifier für Kleidungsstile hat sich als relativ uninteressant erwiesen, die Kleidung ist wie schon vorab erwartet sehr stark mit der Herkunft der Charactere verbunden, jedoch sind Ausnahmen nicht signifikant genug um ohne viel manuelle nachbearbeitung relevante Ergebnisse zu liefern. 
+Zu Kleidung in Avatar the Last Airbender sei somit einfach gesagt, die Farbe und Stil der Kleidung korreliert stark mit der Herkunft sowie dem Stand der Person.
+<br>
+<br>
+Bending: Wasser und Luft ähneln sich in ihrer Darstellung stark, gezeichnete Luftströme müssen nicht zwangsläufig auch “bending” sein sondern können auch Wind darstellen, dasselbe gilt für Feuer und Erde, da diese Elemente auch natürlich in Szenen vorkommen können ohne manipulation durch Figuren, gibt es auch hier leider oft false positives die in der Nachbereitung ausgebessert werden mussten.
+</strong></p>
+<p class="text-left"><strong class="h2">Ergebnisse: </strong></p>		  
+<p class="text-left"><strong>
+	Wie zu erwarten erscheint die Titelfigur Aang am häufigsten im Verlauf der Bücher, mit 285 Panelauftritten auf 212 Seiten. Die 4 weiteren Hauptfiguren der Original Serie erscheinen etwa gleich oft, wobei konträr zur Erwartung aufgrund der Hauptgeschichte erscheint Zuko hier am seltensten mit 173 Panelauftritten und Toph, deren Entwicklung in der Geschichte eher sekundären Fokus erhält am häufigsten mit 180 Paneln.</strong></p><br><br>
+
+		  <p><img src="Images/Auswertung1 excel.PNG"alt="Ausschnitt Excel">
+
+<p class="text-left"><strong>
+Katara und Sokka sind mit jeweils 175 und 179 Auftritten auch etwa gleichwertig vertreten, wobei Katarra öfter mit Zuko und Aang und Sokka häufiger mit Toph in Szenen vorkommt, was erneut der Handlung geschuldet ist.
+ <br><br>
+
+
+ Mit 13 von 16 Szenen sind nahezu alle Flashback Szenen fokussiert auf Zuko’s Vergangenheit.
+Auch die oben erwähnten Dunkleren Szenen die oft als Flashback erkannt wurden sind nahezu ausschließlich Szenen mit Fokus auf Zuko und hier kann man nur spekulieren, dass diese Ähnlichkeit zu Flashbacks gewollt gewählt sind um die Stimmung der Szene zu steuern.
+<br><br>
+
+
+In 85 von 212 Seiten kommt Bending der 4 Elemente vor, hier ist vor allem anzumerken, dass vor allem Aang und Toph meist in Szenen mit Bending vorkommen, während Zuko und Katara ihre Fähigkeiten wesentlich seltener verwenden.
+<br><br>
+
+
+Soweit die Auswertung unserer Versuche mit Watson, um die Visualisierung der Ergebnisse selbst ausprobieren zu können finden sie oben unter “try it yourself” eine Auswahl aus 4 Classifier die direkt mit Watson verbunden sind. 
+</strong></p>
       </div>
     </div>
   </div>
