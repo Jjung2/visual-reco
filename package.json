@@ -1,0 +1,27 @@
+{
+    "name": "visual-reco",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "async": "^3.1.0",
+        "cf-deployment-tracker-client": "^0.1.4",
+        "cfenv": "1.2.x",
+        "express": "4.17.x",
+        "express-fileupload": "1.1.5",
+        "gm": "^1.23.1",
+        "ibm-watson": "^4.3.3",
+        "node-uuid": "^1.4.8",
+        "request": "^2.88.0",
+        "socket.io": "^2.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/IBM-Bluemix/Visual-Recognition-Tile-Localization.git"
+    },
+    "engines": {
+        "node": "12.x"
+    }
+}
