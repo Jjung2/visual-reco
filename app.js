@@ -24,7 +24,7 @@ var totalAnalysisRequests = 0;
 var completeAnalysisRequests = 0;
 
 var rootDir = './uploads';
-var MIN_TILE_SIZE = 250;
+var MIN_TILE_SIZE = 435;
 
 // PUT YOUR WATSON KEY AND CLASSIFIER ID HERE:
 var WATSON_KEY = "";
@@ -46,12 +46,14 @@ var io = require('socket.io')(http);
 
 app.use(fileUpload());
 
-// serve the files out of ./public as our main files
+// serve the files out of ./public
 app.use(express.static(__dirname + '/public'));
 app.use('/uploads', express.static(rootDir));
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
+
+// adjusted version to accomodate multiple API / Classifier combinations
 
 app.post('/data', function(req,res){
     if (req.body.classifier == "Katara"){
@@ -104,16 +106,8 @@ app.post('/file-upload', function(req, res) {
         fs.mkdirSync(uploadDir);
     }
 
-    // HACK to force the MIN_TILE_SIZE
-    // var tileWidth = req.body.tileWidth ? req.body.tileWidth : MIN_TILE_SIZE;
-    // var tileHeight = req.body.tileHeight ? req.body.tileHeight : MIN_TILE_SIZE;
-    //
-    // if (tileWidth < MIN_TILE_SIZE) {
-    //     tileWidth = MIN_TILE_SIZE
-    // }
-    // if (tileHeight < MIN_TILE_SIZE) {
-    //     tileHeight = MIN_TILE_SIZE
-    // }
+    // Edit to force the MIN_TILE_SIZE
+    
 
     var tileWidth = MIN_TILE_SIZE;
     var tileHeight = MIN_TILE_SIZE;
