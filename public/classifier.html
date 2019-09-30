@@ -26,7 +26,6 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="stylesheets/style.css" rel="stylesheet">
 
 </head>
 
@@ -34,8 +33,7 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">AVATARD K.I.</a>
+  <div class="container"><a class="navbar-brand" href="#"><strong>AVATARDS K.I.</strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -48,63 +46,23 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Auswertung</a>
-          </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Try it Yourself
-        </a>
-          
-          <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Classifier 1</a>
-            <a class="dropdown-item" href="#">Classifier 2</a>
-<!-- später für optische Feinheiten--><div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Classifier 3</a>
-            <a class="dropdown-item" href="#">Classifier 4</a>
-          </div>
-        </li>
+            <a class="nav-link" href="/classifier.html">Try it Yourself</a>
+	    </li>
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="container text-center">
-  <h1 class="mt-5 text-white font-weight-light">Animated Bootstrap Navbar Dropdowns</h1>
-  
+  <h1 class="mt-5">Welcome to our Watson Visual Recognition Atla Character Classifier</h1>
 </div>
-   <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top shadow fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">AVATARD</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Auswertung</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Try it Yourself</a>
-          </li>
-         <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>-->
-
-  <!-- Page Content -->
+  
+<!-- Page Content -->
   <div class="container">
        <form action="/data" method="post" enctype="multipart/form-data">
-        <label> Classifier</label>
-        <select name="classifier">
-            <option value="Katara"> Katara </option>
+         <strong class="h2"> Select Classifier from Dropdown: </strong>
+         <select name="classifier" class="h2">
+           <option value="Katara"> Katara </option>
             <option value="Aang"> Aang </option>
             <option value="Toph"> Toph </option>
             <option value="Zuko"> Zuko </option>
@@ -121,14 +79,8 @@
 
 
             <form action="/file-upload" class="dropzone" id="uploader" enctype="multipart/form-data">
-
-                <h1 id="heading">
-                    Welcome to the Watson Visual Recognition Slicer/Classifier!
-                </h1>
-
-                <div class="dz-message" data-dz-message><span>Just drag and drop image files from your desktop into the browser here, and they will be sliced up and analyzed using the IBM Watson Visual Recognition service, using a custom classifier of your choice.</span></div>
-
-                <input name="tileWidth" value="200" type="hidden" step="1" />
+              <h1 id="heading"> To detect a character on a page of the comic, first select one of the classifiers from the dropdown above and press the save button, then just drag and drop the image file into this window and it will be automatically analysed. </h1>
+              <input name="tileWidth" value="200" type="hidden" step="1" />
                 <input name="tileHeight" value="200" type="hidden" step="1" />
 
                 <div class="fallback">
@@ -155,10 +107,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <!-- <script src="vendor/jquery/jquery.slim.min.js"></script> -->
-  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
 </body>
 
